@@ -3,6 +3,8 @@
 #include "gameboard.h"
 
 int main() {
+	// GameBoard board;
+	// board.print();
     return 0;
 }
 
@@ -16,5 +18,6 @@ EMSCRIPTEN_BINDINGS(my_module) {
 EMSCRIPTEN_BINDINGS(my_class_example) {
    class_<GameBoard>("GameBoard")
     .constructor<>()
-    .function("print", &GameBoard::print);
+    .function("print", &GameBoard::print)
+    .function("resetToDefault", &GameBoard::resetToDefault);
 }

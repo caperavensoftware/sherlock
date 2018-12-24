@@ -10,9 +10,15 @@
         var Module = {
             onRuntimeInitialized: function() {
                 console.log('add result: ' + Module.add(3,3));
+                console.log("---------------");
 
-                const board = new Module.GameBoard();
+                var board = new Module.GameBoard();
                 board.print();
+                console.log("---------------");
+
+                board.resetToDefault();
+                board.print();
+                console.log("---------------");
             }
         };
     </script>
