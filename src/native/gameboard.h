@@ -1,6 +1,4 @@
-namespace sherlockgame {
-    class GameBoard {
-        public:
-            void print();
-    }
-}
+class GameBoard {
+public:
+	void print();
+};

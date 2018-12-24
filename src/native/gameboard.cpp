@@ -1,10 +1,6 @@
 #include <iostream>
+#include "gameboard.h"
 
-namespace sherlockgame {
-    class GameBoard {
-        public: 
-        void print() {
-            std::cout << "Hello gameboard" << std::endl;
-        }
-    }
+void GameBoard::print() {
+	std::cout << "hello gameboard" << std::endl;
 }

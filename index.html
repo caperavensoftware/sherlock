@@ -10,6 +10,9 @@
         var Module = {
             onRuntimeInitialized: function() {
                 console.log('add result: ' + Module.add(3,3));
+
+                const board = new Module.GameBoard();
+                board.print();
             }
         };
     </script>
