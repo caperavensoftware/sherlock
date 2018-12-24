@@ -3,10 +3,12 @@
 #include "gameboard.h"
 
 int main() {
-	// GameBoard board;
-	// board.print();
+	GameBoard board;
+	board.print();
     return 0;
 }
+
+#ifdef EMSCRIPTEN
 
 #include <emscripten/bind.h>
 using namespace emscripten;
@@ -21,3 +23,5 @@ EMSCRIPTEN_BINDINGS(my_class_example) {
     .function("print", &GameBoard::print)
     .function("resetToDefault", &GameBoard::resetToDefault);
 }
+
+#endif
