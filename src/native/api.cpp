@@ -3,12 +3,6 @@
 #include "gameboard.h"
 
 int main() {
-    std::cout << "Hello world" << std::endl;
-    std::cout << add(1,2) << std::endl;
-
-    GameBoard g;
-	g.print();
-
     return 0;
 }
 
