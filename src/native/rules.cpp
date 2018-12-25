@@ -1,6 +1,6 @@
 #include "rules.h"
 
-Rule RuleFactory::getLeftOf(GameBoard board) {
+Rule RuleFactory::getLeftOf(GameBoard &board) {
     Rule result;
     result.p1 = 0;
     result.p2 = 0;
@@ -9,7 +9,7 @@ Rule RuleFactory::getLeftOf(GameBoard board) {
 	return result;
 };
 
-Rule RuleFactory::getRightOf(GameBoard board) {
+Rule RuleFactory::getRightOf(GameBoard &board) {
 	Rule result;
 	result.p1 = 0;
 	result.p2 = 0;
@@ -18,7 +18,7 @@ Rule RuleFactory::getRightOf(GameBoard board) {
 	return result;
 };
 
-Rule RuleFactory::getBetween(GameBoard board) {
+Rule RuleFactory::getBetween(GameBoard &board) {
 	Rule result;
 	result.p1 = 0;
 	result.p2 = 0;
@@ -27,7 +27,7 @@ Rule RuleFactory::getBetween(GameBoard board) {
 	return result;
 };
 
-Rule RuleFactory::getNotLeftOf(GameBoard board) {
+Rule RuleFactory::getNotLeftOf(GameBoard &board) {
 	Rule result;
 	result.p1 = 0;
 	result.p2 = 0;
@@ -36,7 +36,7 @@ Rule RuleFactory::getNotLeftOf(GameBoard board) {
 	return result;
 };
 
-Rule RuleFactory::getNotRightOf(GameBoard board) {
+Rule RuleFactory::getNotRightOf(GameBoard &board) {
 	Rule result;
 	result.p1 = 0;
 	result.p2 = 0;
@@ -45,7 +45,7 @@ Rule RuleFactory::getNotRightOf(GameBoard board) {
 	return result;
 };
 
-Rule RuleFactory::getNotBetween(GameBoard board) {
+Rule RuleFactory::getNotBetween(GameBoard &board) {
 	Rule result;
 	result.p1 = 0;
 	result.p2 = 0;
