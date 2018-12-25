@@ -19,6 +19,9 @@
                 board.resetToDefault();
                 board.print();
                 console.log("---------------");
+
+                const rule = Module.RuleFactory.getLeftOf(board);
+                console.log(rule);
             }
         };
     </script>

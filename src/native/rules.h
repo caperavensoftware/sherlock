@@ -1,3 +1,4 @@
+#pragma once
 #include "gameboard.h"
 
 enum RuleType {
@@ -17,6 +18,7 @@ struct Rule {
 };
 
 class RuleFactory {
+public:
     static Rule getLeftOf(GameBoard board);
     static Rule getRightOf(GameBoard board);
     static Rule getBetween(GameBoard board);

@@ -1,3 +1,4 @@
+#pragma once
 class GameBoard {
 private:
 	int board[6][6];
