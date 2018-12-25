@@ -3,11 +3,13 @@
 #include "gameboard.h"
 #include "rules.h"
 
+#ifndef EMSCRIPTEN
 int main() {
 	GameBoard board;
 	board.print();
     return 0;
 }
+#endif
 
 #ifdef EMSCRIPTEN
 
