@@ -1,10 +1,17 @@
 #include "rules.h"
+#include "utils.h"
 
 Rule RuleFactory::getLeftOf(GameBoard &board) {
+	int* block = getRandomBlock(board);
+	/*
+		JHR: todo
+		This is not correct.
+		You need it create unique id for each image and return those image id values
+	*/
     Rule result;
-    result.p1 = 0;
-    result.p2 = 0;
-    result.p3 = 0;
+    result.p1 = block[0];
+    result.p2 = block[1];
+    result.p3 = block[2];
 	result.ruleType = RuleType::leftOf;
 	return result;
 };
