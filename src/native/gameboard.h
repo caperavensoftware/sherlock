@@ -1,11 +1,14 @@
 #pragma once
+#include "datastructures.h"
+
 class GameBoard {
 private:
-	int board[6][6];
+	GameBoardData boardData;
 	void shuffelBoard();
 	void shuffelRow(int &row);
 public:
 	GameBoard();
 	void print();
 	void resetToDefault();
+	GameBoardData getBoard();
 };

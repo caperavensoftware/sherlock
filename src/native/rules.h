@@ -1,5 +1,6 @@
 #pragma once
 #include "gameboard.h"
+#include "datastructures.h"
 
 enum RuleType {
     leftOf,
@@ -12,9 +13,9 @@ enum RuleType {
 
 struct Rule {
 	RuleType ruleType;
-    int p1;
-    int p2;
-    int p3;
+	ColumnBlock id1;
+	ColumnBlock id2;
+	ColumnBlock id3;
 };
 
 class RuleFactory {

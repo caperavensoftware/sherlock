@@ -2,11 +2,15 @@
 #include "utils.h"
 #include "gameboard.h"
 #include "rules.h"
+#include "datastructures.h"
 
 #ifndef EMSCRIPTEN
 int main() {
 	GameBoard board;
-	board.print();
+	RuleFactory factory;
+
+	Rule result = factory.getLeftOf(board);
+
     return 0;
 }
 #endif
@@ -43,9 +47,19 @@ EMSCRIPTEN_BINDINGS(my_add_function) {
 
     value_object<Rule>("Rule")
         .field("ruleType", &Rule::ruleType)
-        .field("p1", &Rule::p1)
-        .field("p2", &Rule::p2)
-        .field("p3", &Rule::p3);
+        .field("id1", &Rule::id1)
+        .field("id2", &Rule::id2)
+        .field("id3", &Rule::id3);
+
+    value_object<GameBoardData>("GameBoardData")
+        .field("board", &GameBoardData::board)
+        .field("playerBoard", &GameBoardData::playerBoard);
+
+    value_object<ColumnBlock>("ColumnBlock")
+        .field("id", &ColumnBlock::id)
+        .field("row", &ColumnBlock::row)
+        .field("column", &ColumnBlock::column)
+        .field("value", &ColumnBlock::value);
 }
 
 #endif
