@@ -16,8 +16,10 @@
                 board.print();
                 console.log("---------------");
 
-                const rule = Module.RuleFactory.getLeftOf(board);
-                console.log(rule);
+                let rules = Module.RuleFactory.getRules(board, 3);
+                for (let i = 0; i < rules.size(); i++) {
+                    console.log(rules.get(i));
+                }
             }
         };
     </script>

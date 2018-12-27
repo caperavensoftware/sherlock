@@ -1,6 +1,7 @@
 #pragma once
 #include "gameboard.h"
 #include "datastructures.h"
+#include <vector>
 
 enum RuleType {
     leftOf,
@@ -26,4 +27,5 @@ public:
     static Rule getNotLeftOf(GameBoard &board);
     static Rule getNotRightOf(GameBoard &board);
     static Rule getNotBetween(GameBoard &board);
+	static std::vector<Rule> getRules(GameBoard &board, int numberOfRules);
 };

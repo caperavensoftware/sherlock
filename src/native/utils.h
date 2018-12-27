@@ -5,4 +5,4 @@
 int add(int value1, int value2);
 
 int getCellId(int row, int column);
-ColumnBlock* getRandomBlock(GameBoard &board);
+ColumnBlock* getRandomBlock(GameBoard &board, bool requiresAll = false);

@@ -1,15 +1,17 @@
 #include <iostream>
+#include <list>
 #include "utils.h"
 #include "gameboard.h"
 #include "rules.h"
 #include "datastructures.h"
+#include <vector>
 
 #ifndef EMSCRIPTEN
 int main() {
 	GameBoard board;
 	RuleFactory factory;
 
-	Rule result = factory.getLeftOf(board);
+	std::vector<Rule> result = factory.getRules(board, 3);
 
     return 0;
 }
@@ -35,7 +37,8 @@ EMSCRIPTEN_BINDINGS(my_add_function) {
         .class_function("getBetween", &RuleFactory::getBetween)
         .class_function("getNotLeftOf", &RuleFactory::getNotLeftOf)
         .class_function("getNotRightOf", &RuleFactory::getNotRightOf)
-        .class_function("getNotBetween", &RuleFactory::getNotBetween);
+        .class_function("getNotBetween", &RuleFactory::getNotBetween)
+		.class_function("getRules", &RuleFactory::getRules);
 
     enum_<RuleType>("RuleType")
         .value("leftOf", leftOf)
@@ -60,6 +63,8 @@ EMSCRIPTEN_BINDINGS(my_add_function) {
         .field("row", &ColumnBlock::row)
         .field("column", &ColumnBlock::column)
         .field("value", &ColumnBlock::value);
+
+	register_vector<Rule>("vector<Rule>");
 }
 
 #endif
