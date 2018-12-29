@@ -36,9 +36,9 @@ Rule RuleFactory::getBetween(GameBoard &board) {
 Rule RuleFactory::getNotLeftOf(GameBoard &board) {
 	ColumnBlock* block = getRandomBlock(board);
 	Rule result;
-	result.id1 = block[0];
+	result.id1 = block[2];
 	result.id2 = block[1];
-	result.id3 = block[2];
+	result.id3 = block[0];
 	result.ruleType = RuleType::leftOf;
 	return result;
 };
@@ -46,9 +46,9 @@ Rule RuleFactory::getNotLeftOf(GameBoard &board) {
 Rule RuleFactory::getNotRightOf(GameBoard &board) {
 	ColumnBlock* block = getRandomBlock(board);
 	Rule result;
-	result.id1 = block[0];
+	result.id1 = block[2];
 	result.id2 = block[1];
-	result.id3 = block[2];
+	result.id3 = block[0];
 	result.ruleType = RuleType::leftOf;
 	return result;
 };
@@ -57,8 +57,8 @@ Rule RuleFactory::getNotBetween(GameBoard &board) {
 	ColumnBlock* block = getRandomBlock(board, true);
 	Rule result;
 	result.id1 = block[0];
-	result.id2 = block[1];
-	result.id3 = block[2];
+	result.id2 = block[2];
+	result.id3 = block[1];
 	result.ruleType = RuleType::leftOf;
 	return result;
 };

@@ -6,22 +6,17 @@
     <title>Document</title>
 </head>
 <body>
+    <script type="module">
+        import {Game} from "./src/js/game.js";
+        window.game = new Game();
+    </script>
+
     <script>
         var Module = {
             onRuntimeInitialized: function() {
-                console.log('add result: ' + Module.add(3,3));
-                console.log("---------------");
-
-                var board = new Module.GameBoard();
-                board.print();
-                console.log("---------------");
-
-                let rules = Module.RuleFactory.getRules(board, 3);
-                for (let i = 0; i < rules.size(); i++) {
-                    console.log(rules.get(i));
-                }
+                window.game.initialize(Module);
             }
-        };
+        };    
     </script>
 
     <script src="./bin/engine.js"></script>
