@@ -1,14 +1,13 @@
 export class Game {
     initialize(module) {
         this.module = module;
+    }
 
-        this.board = new this.module.GameBoard();
-        this.board.print();
-        console.log("---------------");
+    getBoard() {
+        return new this.module.GameBoard();
+    }
 
-        let rules = this.module.RuleFactory.getRules(this.board, 3);
-        for (let i = 0; i < rules.size(); i++) {
-            console.log(rules.get(i));
-        }
+    getRules() {
+        return this.module.RuleFactory.getRules(window.gameBoard.board, 3);
     }
 }

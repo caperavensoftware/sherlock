@@ -6,6 +6,9 @@
     <title>Document</title>
 </head>
 <body>
+    <game-board></game-board>
+    <game-hints></game-hints>
+
     <script type="module">
         import {Game} from "./src/js/game.js";
         window.game = new Game();
@@ -15,10 +18,14 @@
         var Module = {
             onRuntimeInitialized: function() {
                 window.game.initialize(Module);
+                window.gameBoard.initialize();
+                window.gameHints.initialize();
             }
         };    
     </script>
 
     <script src="./bin/engine.js"></script>
+    <script src="./src/custom-components/game-board.js"></script>
+    <script src="./src/custom-components/game-hints.js"></script>
 </body>
 </html>
