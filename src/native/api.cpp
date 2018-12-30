@@ -9,6 +9,8 @@
 #ifndef EMSCRIPTEN
 int main() {
 	GameBoard board;
+	board.print();
+
 	RuleFactory factory;
 
 	std::vector<Rule> result = factory.getRules(board, 3);
@@ -66,6 +68,8 @@ EMSCRIPTEN_BINDINGS(my_add_function) {
         .field("value", &ColumnBlock::value);
 
 	register_vector<Rule>("vector<Rule>");
+    register_vector<std::vector<int>>("TwoDVector");
+    register_vector<std::vector<double>>("VectorVectorDouble");
 }
 
 #endif

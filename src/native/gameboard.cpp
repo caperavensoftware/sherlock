@@ -5,7 +5,7 @@ GameBoard::GameBoard() {
 	resetToDefault();
 }
 
-void GameBoard::print() {
+void GameBoard::print() {	
 	for (int i = 0; i < 6; i++) {
 		for (int j = 0; j < 6; j++) {
 			std::cout << this->boardData.board[i][j];
@@ -15,10 +15,14 @@ void GameBoard::print() {
 }
 
 void GameBoard::resetToDefault() {
-	for (int row = 0; row < 6; row++) {
+	for (int i = 0; i < 6; i++) {
+		std::vector<int> row;
+
 		for (int column = 0; column < 6; column++) {
-			this->boardData.board[row][column] = column;
+			row.push_back(column);
 		}
+
+		this->boardData.board.push_back(row);
 	}
 
 	this->shuffelBoard();

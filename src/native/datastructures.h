@@ -1,8 +1,9 @@
 #pragma once
+#include <vector>
 
 struct GameBoardData {
-	int board[6][6];
-	int playerBoard[6][6];
+	std::vector<std::vector<int>> board;
+	std::vector<std::vector<int>> playerBoard;
 };
 
 struct ColumnBlock {
