@@ -22,3 +22,27 @@ game-hints {
     width: 480px;
     background: blue;
 }
+
+.col0 {
+    fill: "red";
+}
+
+.col1 {
+    fill: "green";
+}
+
+.col2 {
+    fill: "blue";
+}
+
+.col3 {
+    fill: "gold";
+}
+
+.col4 {
+    fill: "silver";
+}
+
+.col5 {
+    fill: "yellow";
+}
