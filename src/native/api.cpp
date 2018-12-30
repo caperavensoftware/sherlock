@@ -28,7 +28,8 @@ EMSCRIPTEN_BINDINGS(my_add_function) {
     class_<GameBoard>("GameBoard")
         .constructor<>()
         .function("print", &GameBoard::print)
-        .function("resetToDefault", &GameBoard::resetToDefault);
+        .function("resetToDefault", &GameBoard::resetToDefault)
+        .function("getBoard", &GameBoard::getBoard);
 
     class_<RuleFactory>("RuleFactory")
         .constructor<>()
